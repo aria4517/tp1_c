@@ -200,10 +200,9 @@ int main(){
     }
 
     // Mostrar ranking
-    cout << "\n📦 Ranking de productos más vendidos:\n";
+    cout << "Ranking de productos más vendidos:\n";
     for (int i = 0; i < cantProductos; i++) {
-        cout << "Producto " << codigosProd[i]
-             << " → " << cantProd[i] << " ventas" << endl;
+        cout << "Producto " << codigosProd[i]<< ": " << cantProd[i] << " ventas" << endl;
     }
 
     return 0;
@@ -214,4 +213,5 @@ int main(){
 
     
 }
+
 
