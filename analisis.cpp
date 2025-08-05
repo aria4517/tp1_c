@@ -77,6 +77,17 @@ int main(){
         }
     }
 
+    // Buscar el vendedor con mayor total de ventas
+    int idxMejorVendedor = 0;
+    for (int i = 1; i < cantVendedores; i++) {
+        if (totalVentasXVendedor[i] > totalVentasXVendedor[idxMejorVendedor]) {
+            idxMejorVendedor = i;
+        }
+    }
+
+    cout << "El vendedor que más dinero generó fue: " << vendedores[idxMejorVendedor].nombre<< " con $" << totalVentasXVendedor[idxMejorVendedor] << endl;
+
+    
     //Acumular ventas por sucursal
     float totalVentasXSucursal[3]={0}; //son 3 sucursales y en principio en ninguna se hizo ninguna venta
     int cantSucursales=0;
@@ -203,3 +214,4 @@ int main(){
 
     
 }
+
