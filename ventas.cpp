@@ -2,7 +2,8 @@
   #include<cstdio>
   #include<cstring>
   using namespace std;
-  
+
+//Estructura para una venta
   struct Venta{
   	int fecha;
   	int codigoVendedor;
@@ -16,7 +17,7 @@
   	char sucursal[50];
   };
   
-  
+  //Función que verifica si existe un vendedor con el código dado en el archivo "vendedores.dat".
   bool vendedorExiste(int codigo){
   	FILE* archivo = fopen("vendedores.dat", "rb");
   	if(archivo==NULL) return false;
@@ -40,6 +41,7 @@
   	
   	int opcion;
   	do{
+		//Si se alcanzó el máximo de 1000 ventas, se detiene
   		if(cantidad>=1000){
   			cout<<"Se alcanzó el máximo de ventas (1000)."<<endl;
   			break;
@@ -69,3 +71,4 @@
 	  }
 	  return 0;
   }
+
